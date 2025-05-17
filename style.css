@@ -1,0 +1,25 @@
+.our-sevice{
+    color: black !important;
+}
+.service-title {
+    align-items: center;
+}
+h1 {
+    color: blueviolet;
+    font-size: 100px;
+}
+
+.testimonial-cont {
+    background-color: #ffcccc;
+}
+
+.testimonial-img {
+    float: left;
+    margin-right: 20px;
+}
+.testimonial-title {
+    float: ;
+}
+.testimonial-p {
+    clear: both;
+}
