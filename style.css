@@ -1,11 +1,43 @@
-.our-sevice{
-    color: black !important;
+
+.header-section {
+  background-image: url('images/header.jpg'); 
+  background-size: cover;    
+  background-position: center; 
+  height: 100vh;                            
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.226);
+  background-size: cover;    
+  background-position: center; 
+  height: 100vh;                            
+}
+
+
+.our-service{
+    background-color: #9EC6F3;
 }
 .service-title {
     align-items: center;
 }
+.service-sub {
+    background-color: #A08963;
+    padding-left: 7px ;
+    padding-top: 7px;
+}
+
+.doctor-title {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 0px solid black;
+  border-right: 1px solid black;
+  padding: 10px;
+}
+
 h1 {
-    color: blueviolet;
+    color: #003092;
     font-size: 100px;
 }
 
@@ -25,3 +57,20 @@ h1 {
 }
 
 /* Footer */ 
+footer  {
+    background-color: #003092;
+    color: #ffff;
+}
+.med {
+    color: black;
+}
+.link {
+    color: red;
+}
+footer svg {
+    margin-right: 10px;
+}
+.hr {
+    color: #fff;
+    height: 10px;
+}
