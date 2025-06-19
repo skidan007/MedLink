@@ -3,6 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/4a2b055604.js"
       crossorigin="anonymous"
@@ -11,21 +25,28 @@
   </head>
   <body>
     <header>
-      <nav>
-        <p>Med<span class="Link">Link</span></p>
-        <ul>
+      <nav class="navbar">
+        <div class="logo">
+          <span class="med">Med<span class="link">Link</span></span>
+        </div>
+
+        <ul class="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#home">Service</a></li>
-          <li><a href="#home">Blog</a></li>
-          <li><a href="#home">Contact</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="nav-actions">
+          <i class="fas fa-search"></i>
+          <button class="get-started">Get Started</button>
+        </div>
       </nav>
     </header>
 
     <!-- main -->
     <main>
       <section id="hero">
-        <div class="container">
+        <div class="cont">
           <div class="overlay">
             <div class="content">
               <h1>Your Health, Simplified</h1>
@@ -34,8 +55,12 @@
                 health advice.
               </p>
               <div class="hero-btn">
-                <button class="btn" type="button">Book Appointment</button>
-                <button class="btn" type="button">Explore Health Tips</button>
+                <button class="head-btn one" type="button">
+                  Book Appointment
+                </button>
+                <button class="head-btn two" type="button">
+                  Explore Health Tips
+                </button>
               </div>
             </div>
           </div>
@@ -44,52 +69,57 @@
 
       <!-- our service -->
       <section id="service">
-        <div class="container">
+        <div class="service-container">
           <h2>Our Services</h2>
-          <p>Feel Like Home With Best Medical Care</p>
-          <div class="row">
-            <div class="col">
-              <img src="" alt="neorology" />
-              <div>
-                <h2>Neurology</h2>
+          <p class="subtitle">Feel Like Home With Best Medical Care</p>
+          <div class="row service-row">
+            <div class="col service-col">
+              <img src="images/asthma1.jpg" alt="neorology" />
+              <div class="service-content">
+                <i class="fa-solid fa-brain"></i>
+                <h3>Neurology</h3>
                 <p>
                   Once the family has reached a decision, the team informs the
                   relevant parties.
                 </p>
+                <a href="" class="read-more">Read More</a>
               </div>
             </div>
-            <div class="col">
-              <img src="" alt="cardiology" />
-              <div>
-                <h2>Cadiology</h2>
+            <div class="col service-col">
+              <img src="images/cardiology.jpg" alt="cardiology" />
+              <div class="service-content">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h3>Cadiology</h3>
                 <p>
                   Proper check up on your heart is rest assured with MedLink.
                 </p>
-                <a href="">Read More</a>
+                <a href="" class="read-more">Read More</a>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col">
-              <img src="" alt="dentist" />
-              <div>
-                <h2>Dentist</h2>
+          <div class="row service-row">
+            <div class="col service-col">
+              <img src="images/dentist.webp" alt="dentist" />
+              <div class="service-content">
+                <i class="fa-solid fa-tooth"></i>
+                <h3>Dentist</h3>
                 <p>
                   Get the best doctor that will take care of your tooth and
                   delivers medications.
                 </p>
-                <a href="">Read More</a>
+                <a href="" class="read-more">Read More</a>
               </div>
             </div>
-            <div class="col">
-              <img src="" alt="dentist" />
-              <div>
-                <h2>Eye Care</h2>
+            <div class="col service-col">
+              <img src="images/eye-care.jpg" alt="eye care" />
+              <div class="service-content">
+                <i class="fa-solid fa-eye"></i>
+                <h3>Eye Care</h3>
                 <p>
                   MedLink eye specialists take prior care of patients and follow
                   up meds.
                 </p>
-                <a href="">Read More</a>
+                <a href="" class="read-more">Read More</a>
               </div>
             </div>
           </div>
@@ -97,68 +127,75 @@
       </section>
 
       <!-- doctors -->
-      <section>
+      <section id="doctors">
         <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <img src="" alt="" />
-                <div class="card-body">
+          <div class="doctor-title">
+            <h2>Meet Our Expert <span>Doctors</span></h2>
+            <p>
+              At MedLink, your health is in the hands of trusted professionals.
+            </p>
+          </div>
+
+          <div class="doctor-row">
+            <div class="doctor-col">
+              <div class="doctor-card">
+                <div class="doctor-card-body">
+                  <img src="images/doc3.jpg" alt="doc3" />
                   <h3>Dr Murphy Christian</h3>
                   <p>Dentist</p>
-                  <button class="btn" type="button">Book Now</button>
+                  <button class="doc-btn" type="button">Book Now</button>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card">
-                <img src="" alt="" />
-                <div class="card-body">
+            <div class="doctor-col">
+              <div class="doctor-card">
+                <div class="doctor-card-body">
+                  <img src="images/doc7.jpg" alt="doc7" />
                   <h3>Dr Kristina Castle</h3>
                   <p>Surgeon</p>
-                  <button class="btn" type="button">Book Now</button>
+                  <button class="doc-btn" type="button">Book Now</button>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card">
-                <img src="" alt="" />
-                <div class="card-body">
+            <div class="doctor-col">
+              <div class="doctor-card">
+                <div class="doctor-card-body">
+                  <img src="images/img1.jpg" alt="doc8" />
                   <h3>Dr Triyne Kesakov</h3>
                   <p>Rheumatologist</p>
-                  <button class="btn" type="button">Book Now</button>
+                  <button class="doc-btn" type="button">Book Now</button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <img src="" alt="" />
-                <div class="card-body">
+          <div class="doctor-row">
+            <div class="doctor-col">
+              <div class="doctor-card">
+                <div class="doctor-card-body">
+                  <img src="images/img5.jpg" alt="doc3" />
                   <h3>Dr Jane Doe</h3>
                   <p>Pediatrician</p>
-                  <button class="btn" type="button">Book Now</button>
+                  <button class="doc-btn" type="button">Book Now</button>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card">
-                <img src="" alt="" />
-                <div class="card-body">
+            <div class="doctor-col">
+              <div class="doctor-card">
+                <div class="doctor-card-body">
+                  <img src="images/img6.png" alt="doc3" />
                   <h3>Dr Triyne Sam</h3>
                   <p>Rheumatologist</p>
-                  <button class="btn" type="button">Book Now</button>
+                  <button class="doc-btn" type="button">Book Now</button>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card">
-                <img src="" alt="" />
-                <div class="card-body">
+            <div class="doctor-col">
+              <div class="doctor-card">
+                <div class="doctor-card-body">
+                  <img src="images/img4.jpg" alt="doctors" />
                   <h3>Dr Murphy Jane</h3>
                   <p>Pediatrician</p>
-                  <button class="btn" type="button">Book Now</button>
+                  <button class="doc-btn" type="button">Book Now</button>
                 </div>
               </div>
             </div>
@@ -169,84 +206,85 @@
       <!-- health Care -->
       <section id="health-care">
         <div class="container">
+          <h3>Latest Healthcare Tips</h3>
           <div class="row">
             <div class="col">
-              <div class="card">
-                <img src="" alt="stress" />
+              <div class="card box">
                 <div class="card-body">
+                  <img src="images/stress1.jpg" alt="stress" />
                   <h3>Stress vs. anxiety: How to tell the difference</h3>
                   <p>
                     Everyone gets stressed and anxious from time to time. Find
                     out the differences...
                   </p>
-                  <a href="">Read More......</a>
+                  <a href="" class="read-more read">Read More......</a>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card">
-                <img src="" alt="stress" />
+              <div class="card box">
                 <div class="card-body">
+                  <img src="images/headache1.jpg" alt="headache" />
                   <h3>Why do I have a headache?</h3>
                   <p>
                     There are many types of headache. Some are mild and pass
                     quickly, while...
                   </p>
-                  <a href="">Read More......</a>
+                  <a href="" class="read-more read">Read More......</a>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card">
-                <img src="" alt="stress" />
+              <div class="card box">
                 <div class="card-body">
+                  <img src="images/asthma1.jpg" alt="asthma1" />
                   <h3>Stress vs. anxiety: How to tell the difference</h3>
                   <p>
                     Asthma is a chronic airway condition that leads to wheezing
                     and difficulty breathing...
                   </p>
-                  <a href="">Read More......</a>
+                  <a href="" class="read-more read">Read More......</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col">
-              <div class="card">
-                <img src="" alt="stress" />
+              <div class="card box">
                 <div class="card-body">
+                  <img src="images/stress1.jpg" alt="stress" />
                   <h3>Why do I have a headache?</h3>
                   <p>
                     There are many types of headache. Some are mild and pass
                     quickly, while...
                   </p>
-                  <a href="">Read More......</a>
+                  <a href="" class="read-more read">Read More......</a>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card">
-                <img src="" alt="stress" />
+              <div class="card box">
                 <div class="card-body">
+                  <img src="images/headache2.jpg" alt="stress" />
                   <h3>Why do I have a headache?</h3>
                   <p>
                     There are many types of headache. Some are mild and pass
                     quickly, while...
                   </p>
-                  <a href="">Read More......</a>
+                  <a href="" class="read-more read">Read More......</a>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card">
-                <img src="" alt="stress" />
+              <div class="card box">
                 <div class="card-body">
+                  <img src="images/asthma2.jpg" alt="stress" />
                   <h3>Asthma & allergies</h3>
                   <p>
                     Everyone gets stressed and anxious from time to time. Find
                     out the differences...
                   </p>
-                  <a href="">Read More......</a>
+                  <a href="" class="read-more read">Read More......</a>
                 </div>
               </div>
             </div>
@@ -255,25 +293,25 @@
       </section>
 
       <!-- why choose -->
-      <section>
-        <div class="container">
+      <section id="choose">
+        <div class="container choose">
           <h2>Why Choosing Medlink</h2>
           <h3>The Wide Network of Best Healthcare</h3>
-          <p>
+          <p class="choose-text">
             The Decedent Affairs Office also works with the funeral home or
             transport services and helps to complete and file necessary
             paperwork with county and state offices.
           </p>
           <div class="row">
-            <div class="col">
+            <div class="col-text">
               <p>✔️ Professional Medical Services</p>
               <p>✔️ Free Consulting</p>
             </div>
-            <div class="col">
+            <div class="col-text">
               <p>✔️ Quality & Patient Safety</p>
               <p>✔️ First Aid Guidance</p>
             </div>
-            <div class="col">
+            <div class="col-text">
               <p>✔️ Well experienced Doctors</p>
               <p>✔️ Best Article Recommendation</p>
             </div>
@@ -282,18 +320,24 @@
       </section>
 
       <!-- testimonial -->
-      <section id="testiomonial">
+      <section id="testimonial">
         <div class="container">
-          <h3>Testimonial</h3>
-          <h3>Feedbacks about our Service from the bottom of heart</h3>
-          <div class="row">
-            <div class="col">
-              <div>
-                <img src="" alt="" />
-                <h3>Lisa Norman</h3>
-                <p>Dental Patient</p>
+          <div class="testimonial-title">
+            <h3>Testimonial</h3>
+            <h4>Feedbacks about our Service from the bottom of heart</h4>
+          </div>
+
+          <div class="row2">
+            <div class="test-col">
+              <div class="test-card-head">
+                <img src="images/doc8.jpeg" alt="doc" />
+                <div class="test-card-img">
+                  <h4>Lisa Norman</h4>
+                  <p>Dental Patient</p>
+                </div>
+                <i class="fa-solid fa-quote-right"></i>
               </div>
-              <p>
+              <p class="dental-text">
                 "I want to express my appreciation for a very finely run and
                 professional facility. My family was always encouraged to ask
                 questions, which allowed them to participate in my recovery."
@@ -306,13 +350,16 @@
                 <div><i class="fa-solid fa-star"></i></div>
               </div>
             </div>
-            <div class="col">
-              <div>
-                <img src="" alt="" />
-                <h3>Lisa Norman</h3>
-                <p>Dental Patient</p>
+            <div class="test-col">
+              <div class="test-card-head">
+                <img src="images/doc8.jpeg" alt="doc" />
+                <div class="test-card-img">
+                  <h4>Lisa Norman</h4>
+                  <p>Dental Patient</p>
+                </div>
+                <i class="fa-solid fa-quote-right"></i>
               </div>
-              <p>
+              <p class="dental-text">
                 "I want to express my appreciation for a very finely run and
                 professional facility. My family was always encouraged to ask
                 questions, which allowed them to participate in my recovery."
@@ -326,14 +373,17 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col">
-              <div>
-                <img src="" alt="" />
-                <h3>Lisa Norman</h3>
-                <p>Dental Patient</p>
+          <div class="row2">
+            <div class="test-col">
+              <div class="test-card-head">
+                <img src="images/doc8.jpeg" alt="doc" />
+                <div class="test-card-img">
+                  <h4>Lisa Norman</h4>
+                  <p>Dental Patient</p>
+                </div>
+                <i class="fa-solid fa-quote-right"></i>
               </div>
-              <p>
+              <p class="dental-text">
                 "I want to express my appreciation for a very finely run and
                 professional facility. My family was always encouraged to ask
                 questions, which allowed them to participate in my recovery."
@@ -346,13 +396,16 @@
                 <div><i class="fa-solid fa-star"></i></div>
               </div>
             </div>
-            <div class="col">
-              <div>
-                <img src="" alt="" />
-                <h3>Lisa Norman</h3>
-                <p>Dental Patient</p>
+            <div class="test-col">
+              <div class="test-card-head">
+                <img src="images/doc8.jpeg" alt="doc" />
+                <div class="test-card-img">
+                  <h4>Lisa Norman</h4>
+                  <p>Dental Patient</p>
+                </div>
+                <i class="fa-solid fa-quote-right"></i>
               </div>
-              <p>
+              <p class="dental-text">
                 "I want to express my appreciation for a very finely run and
                 professional facility. My family was always encouraged to ask
                 questions, which allowed them to participate in my recovery."
@@ -371,52 +424,145 @@
 
       <!-- contact -->
       <section id="contact">
-        <div class="contact">
-          <div class="row">
-            <div class="col">
-              <div class="contact-field">
-                <form action="">
-                  <div>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder="E.g 'Daniel Victor'"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="E.g 'skidan007@gmail.com"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows="5"
-                      placeholder="Your Consultation message"
-                      required
-                    ></textarea>
-                  </div>
-                  <label class="checkbox-container">
-                    <input type="checkbox" name="terms" />
-                    Accept Terms and Conditions
-                    <span class="checkmark"></span>
-                  </label>
-                  <div>
-                    <button type="submit">Send Message</button>
-                  </div>
-                </form>
+        <div class="container">
+          <h3>Our Contact</h3>
+          <p>We're Here to Help You Every Step of the way</p>
+          <div class="contact">
+            <div class="contact-form">
+              <form action="">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  placeholder="E.g 'John Biden"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder="E.g 'Skidan007@gmail.com"
+                />
+                <textarea
+                  name="text"
+                  id="message"
+                  minlength="5"
+                  maxlength="50"
+                  placeholder="Your Consultation Message"
+                ></textarea>
+                <input type="checkbox" />
+                <label for="checkbox"> Stay on top of your wellness</label>
+                <button type="button">Send Your Message Here</button>
+              </form>
+            </div>
+
+            <div class="get-in-touch">
+              <div class="touch-text">
+                <h3>Get in touch</h3>
+                <p>
+                  Whether you have a question about our services, need help with
+                  your account, or want to provide feedback.
+                </p>
+              </div>
+              <div class="touch-text">
+                <h3>Chat with us</h3>
+                <p>
+                  Our Team is Available to Provide quick friendly assistance
+                </p>
+              </div>
+              <div class="touch-text">
+                <h3>Call us</h3>
+                <p>
+                  Need immediate Assistance? Call Us Today we’re here to Support
+                  Your Health Journey.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="logo">
+              <span class="med">Med<span class="link">Link</span></span>
+            </div>
+            <p>
+              Our Mission is to empower individuals to take control of their
+              health by providing easy access to experts Doctors
+            </p>
+            <div class="icon">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <div class="email-form">
+              <form action="">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Enter Your Email" required />
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+          <div class="col">
+            <div class="footer-content">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="">Our Doctors</a></li>
+                <li><a href="">Our Services</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Pricing</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <div class="footer-content">
+              <h3>Help</h3>
+              <ul>
+                <li><a href="">Customer Support</a></li>
+                <li>
+                  <a href="">Delivery Details</a>
+                </li>
+                <li><a href="">Terms & Conditions</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <div class="footer-content">
+              <h3>Contact</h3>
+              <ul>
+                <li><a href="">Submit Request</a></li>
+                <li><a href="">Get In Touch</a></li>
+                <li><a href="">Chat With Us</a></li>
+                <li><a href="">Call Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <nav class="footer-list">
+          <ul class="nav-links">
+            <li><a href="#home">About Us</a></li>
+            <li><a href="#home">Contact</a></li>
+            <li><a href="#home">Privacy Policy</a></li>
+            <li><a href="#home">Sitemap</a></li>
+            <li><a href="#home">Terms of Use</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p>copywrite 2000 - 2025 All Right Reserved</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
